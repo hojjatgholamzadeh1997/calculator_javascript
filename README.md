@@ -30,14 +30,10 @@
 
   - calculator_javascript
     - assets
-      - fonts
       - favicon.png
     - css
-      - fonts.css
       - main.css
       - reset.css
-      - responsive.css
-      - style.css
     - js
       - index.js
     - About.txt
