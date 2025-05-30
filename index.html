@@ -15,27 +15,37 @@
     <main>
       <div class="calculator">
         <!-- Screen -->
-        <div class="screen">2 + 2</div>
+        <div class="display" id="display">0</div>
         <!-- Buttons -->
         <div class="buttons">
-          <button type="button" id="c">C</button>
-          <button type="button" id="modulus">%</button>
-          <button type="button" id="multiplication">&times;</button>
-          <button type="button" id="seven">7</button>
-          <button type="button" id="eight">8</button>
-          <button type="button" id="nine">9</button>
-          <button type="button" id="division">&divide;</button>
-          <button type="button" id="four">4</button>
-          <button type="button" id="five">5</button>
-          <button type="button" id="six">6</button>
-          <button type="button" id="addition">+</button>
-          <button type="button" id="one">1</button>
-          <button type="button" id="two">2</button>
-          <button type="button" id="three">3</button>
-          <button type="button" id="subtraction">-</button>
-          <button type="button" id="zero">0</button>
-          <button type="button" id="point">.</button>
-          <button type="button" id="equal">=</button>
+          <!-- Clear Display -->
+          <button type="button" id="c" onclick="clearDisplay()">C</button>
+          <!-- Operations & Other Buttons -->
+          <button type="button" id="multiplication" onclick="operationHandler(' × ')">×</button>
+
+          <button type="button" id="seven" onclick="operationHandler('7')">7</button>
+          <button type="button" id="eight" onclick="operationHandler('8')">8</button>
+          <button type="button" id="nine" onclick="operationHandler('9')">9</button>
+
+          <button type="button" id="division" onclick="operationHandler(' ÷ ')">÷</button>
+
+          <button type="button" id="four" onclick="operationHandler('4')">4</button>
+          <button type="button" id="five" onclick="operationHandler('5')">5</button>
+          <button type="button" id="six" onclick="operationHandler('6')">6</button>
+
+          <button type="button" id="addition" onclick="operationHandler(' + ')">+</button>
+
+          <button type="button" id="one" onclick="operationHandler('1')">1</button>
+          <button type="button" id="two" onclick="operationHandler('2')">2</button>
+          <button type="button" id="three" onclick="operationHandler('3')">3</button>
+
+          <button type="button" id="subtraction" onclick="operationHandler(' - ')">-</button>
+
+          <button type="button" id="zero" onclick="operationHandler('0')">0</button>
+          
+          <button type="button" id="point" onclick="operationHandler('.')">.</button>
+          <!-- Calculate -->
+          <button type="button" id="equal" onclick="calculate()">=</button>
         </div>
       </div>
     </main>
