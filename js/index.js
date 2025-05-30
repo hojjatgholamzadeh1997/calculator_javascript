@@ -9,6 +9,8 @@ function clearDisplay() {
 
 // Operation Handler
 function operationHandler(input) {
+  if (input === "0" && display.innerHTML === "0") return;
+
   let operator = "";
   let ponit = "";
   if (input === " + " || input === " - " || input === " * " || input === " / ") operator = input;
@@ -57,7 +59,11 @@ function operationHandler(input) {
 
 // Calculate
 function calculate() {
-  if (display.innerHTML === "0" || display.innerHTML.slice(-2, -1) === "+" || display.innerHTML.slice(-2, -1) === "-" || display.innerHTML.slice(-2, -1) === "×" || display.innerHTML.slice(-2, -1) === "÷") return;
+  if (display.innerHTML === "0") return;
+  if (display.innerHTML.slice(-2, -1) === "+" || display.innerHTML.slice(-2, -1) === "-" || display.innerHTML.slice(-2, -1) === "×" || display.innerHTML.slice(-2, -1) === "÷") {
+    result = result.slice(0, -3);
+    display.innerHTML =  display.innerHTML.slice(0, -3);
+  }
   
   result = Number(eval(result).toFixed(100));
   
